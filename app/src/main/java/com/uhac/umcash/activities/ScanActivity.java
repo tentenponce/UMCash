@@ -139,7 +139,7 @@ public class ScanActivity extends AppCompatActivity {
 
         double totalPrice = 0;
         for (ProductOrder productOrder : reservationGroup.getProductOrders()) {
-            totalPrice = productOrder.getQuantity() * productOrder.getProductItem().getPrice();
+            double orderPrice = productOrder.getQuantity() * productOrder.getProductItem().getPrice();
             LinearLayout linearLayout = (LinearLayout) getLayoutInflater().inflate(R.layout.layout_product_reserve, null);
             AppCompatTextView itemNameTV = (AppCompatTextView) linearLayout.findViewById(R.id.itemNameTV);
             AppCompatTextView itemQtyTV = (AppCompatTextView) linearLayout.findViewById(R.id.itemQtyTV);
@@ -147,9 +147,11 @@ public class ScanActivity extends AppCompatActivity {
 
             itemNameTV.setText(productOrder.getProductItem().getName());
             itemQtyTV.setText("x" + productOrder.getQuantity());
-            totalPriceTV.setText(Caloocan.PESO_SIGN + " " + Caloocan.numberFormat.format(totalPrice));
+            totalPriceTV.setText(Caloocan.PESO_SIGN + " " + Caloocan.numberFormat.format(orderPrice));
 
             reserveLin.addView(linearLayout);
+
+            totalPrice += orderPrice;
         }
 
         totalPriceTV.setText(Caloocan.PESO_SIGN + " " + Caloocan.numberFormat.format(totalPrice));

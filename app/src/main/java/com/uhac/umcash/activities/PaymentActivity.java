@@ -14,6 +14,7 @@ import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.InputType;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -129,9 +130,11 @@ public class PaymentActivity extends AppCompatActivity {
                                         });
 
                                     } else if (response.body().getResponse_code() == -1) { //invalid
-                                        Snackbar.make(paymentCoor, response.body().getResponse_msg(), Snackbar.LENGTH_LONG).show();
+                                        Toast.makeText(PaymentActivity.this, response.body().getResponse_msg(), Toast.LENGTH_LONG).show();
+                                        onBackPressed();
                                     } else if (response.body().getResponse_code() == -2) {
-                                        Snackbar.make(paymentCoor, response.body().getResponse_msg(), Snackbar.LENGTH_LONG).show();
+                                        Toast.makeText(PaymentActivity.this, response.body().getResponse_msg(), Toast.LENGTH_LONG).show();
+                                        onBackPressed();
                                     } else { //wtfzxc error
                                         Snackbar.make(paymentCoor, "There's something wrong.", Snackbar.LENGTH_LONG).show();
                                         onBackPressed();

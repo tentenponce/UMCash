@@ -49,14 +49,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Reservation Code:"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="@dimen/s_text" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/reserveCodeTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/white"
                     android:textSize="@dimen/m_text" />
             </LinearLayout>
 
@@ -112,7 +112,7 @@
         android:layout_marginRight="12dp"
         android:layout_marginTop="24dp"
         android:scaleType="fitXY"
-        android:src="@drawable/cart_blue"
+        android:src="@drawable/paid_black"
         app:backgroundTint="@android:color/white"
         app:layout_anchor="@id/nestedScroll"
         app:layout_anchorGravity="bottom|right|end" />
