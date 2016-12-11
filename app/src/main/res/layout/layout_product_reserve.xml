@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/cart_blue" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/itemNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/s_text"/>
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/itemQtyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/s_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/totalPriceTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/s_text"
+            android:gravity="right"/>
+    </LinearLayout>
+</LinearLayout>
